@@ -15,8 +15,8 @@ class Rutes
     {
         return [
             'GET' => [
-                '/'              => [Controller::class, 'index'],
-                '/formulario'    => [Formulario::class, 'index']
+                '/'               => [Controller::class, 'index'],
+                '/formulario'     => [Formulario::class, 'index']
             ],
             'POST' => [
                 '/create' => [Controller::class, 'create'],

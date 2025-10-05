@@ -229,23 +229,19 @@
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label col-md-3">Consistencia</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="consistencia"
-                                            id="consistencia1" value="1" required>
+                                        <input class="form-check-input grupo2" type="radio" name="consistencia1" id="consistencia1" value="1">
                                         <label class="form-check-label" for="consistencia1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="consistencia"
-                                            id="consistencia2" value="2">
+                                        <input class="form-check-input grupo2" type="radio" name="consistencia1" id="consistencia2" value="2">
                                         <label class="form-check-label" for="consistencia2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="consistencia"
-                                            id="consistencia3" value="3">
+                                        <input class="form-check-input grupo2" type="radio" name="consistencia1" id="consistencia3" value="3">
                                         <label class="form-check-label" for="consistencia3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="consistencia"
-                                            id="consistencia4" value="4">
+                                        <input class="form-check-input grupo2" type="radio" name="consistencia1" id="consistencia4" value="4">
                                         <label class="form-check-label" for="consistencia4">4</label>
                                     </div>
                                 </div>
@@ -254,22 +250,22 @@
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label col-md-3">Rapidez</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="rapidez" id="rapidez1"
+                                        <input class="form-check-input grupo2" type="radio" name="rapidez1" id="rapidez1"
                                             value="1" required>
                                         <label class="form-check-label" for="rapidez1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="rapidez" id="rapidez2"
+                                        <input class="form-check-input grupo2" type="radio" name="rapidez1" id="rapidez2"
                                             value="2">
                                         <label class="form-check-label" for="rapidez2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="rapidez" id="rapidez3"
+                                        <input class="form-check-input grupo2" type="radio" name="rapidez1" id="rapidez3"
                                             value="3">
                                         <label class="form-check-label" for="rapidez3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="rapidez" id="rapidez4"
+                                        <input class="form-check-input grupo2" type="radio" name="rapidez1" id="rapidez4"
                                             value="4">
                                         <label class="form-check-label" for="rapidez4">4</label>
                                     </div>
@@ -280,22 +276,22 @@
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label col-md-3">Claridad</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="claridad" id="claridad1"
+                                        <input class="form-check-input grupo2" type="radio" name="claridad1" id="claridad1"
                                             value="1" required>
                                         <label class="form-check-label" for="claridad1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="claridad" id="claridad2"
+                                        <input class="form-check-input grupo2" type="radio" name="claridad1" id="claridad2"
                                             value="2">
                                         <label class="form-check-label" for="claridad2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="claridad" id="claridad3"
+                                        <input class="form-check-input grupo2" type="radio" name="claridad1" id="claridad3"
                                             value="3">
                                         <label class="form-check-label" for="claridad3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="claridad" id="claridad4"
+                                        <input class="form-check-input grupo2" type="radio" name="claridad1" id="claridad4"
                                             value="4">
                                         <label class="form-check-label" for="claridad4">4</label>
                                     </div>
@@ -305,22 +301,22 @@
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label col-md-3">Desempeño</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="desempeno" id="desempeno1"
+                                        <input class="form-check-input grupo2" type="radio" name="desempeno1" id="desempeno1"
                                             value="1" required>
                                         <label class="form-check-label" for="desempeno1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="desempeno" id="desempeno2"
+                                        <input class="form-check-input grupo2" type="radio" name="desempeno1" id="desempeno2"
                                             value="2">
                                         <label class="form-check-label" for="desempeno2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="desempeno" id="desempeno3"
+                                        <input class="form-check-input grupo2" type="radio" name="desempeno1" id="desempeno3"
                                             value="3">
                                         <label class="form-check-label" for="desempeno3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input grupo2" type="radio" name="desempeno" id="desempeno4"
+                                        <input class="form-check-input grupo2" type="radio" name="desempeno1" id="desempeno4"
                                             value="4">
                                         <label class="form-check-label" for="desempeno4">4</label>
                                     </div>
@@ -330,178 +326,113 @@
                         <div class="form-text text-danger" id="grupo2Error"></div>
                     </div>
 
-                    <!-- Pregunta de opciones agrupadas 3 - Con CheckBox -->
+                    <!-- Pregunta de opciones agrupadas 3 -->
                     <div class="mb-4">
-                        <label class="form-label">10. Evalúa el desempeño en los siguientes aspectos (asigna un valor del 1 al 4,
+                        <label class="form-label">6. Evalúa sitios que visitas con frecuencia (asigna un valor del 1 al 4,
                             sin repetir valores):</label>
                         <div class="row">
                             <div class="col-md-8">
-                                <!-- Grupo de preguntas -->
                                 <div class="d-flex justify-content-between">
-                                    <!-- Titulo de preguntas -->
-                                    <label class="form-label col-md-3">Consistencia</label>
-                                    <!-- Loop de preguntas -->
+                                    <label class="form-label col-md-3">Libreria</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="1" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            1
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="libreria1" id="Libreria1" value="1">
+                                        <label class="form-check-label" for="libreria1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            2
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="libreria1" id="Libreria2" value="2">
+                                        <label class="form-check-label" for="libreria2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            3
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="libreria1" id="Libreria3" value="3">
+                                        <label class="form-check-label" for="libreria3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            4
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="libreria1" id="Libreria4" value="4">
+                                        <label class="form-check-label" for="libreria4">4</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <!-- Grupo de preguntas -->
                                 <div class="d-flex justify-content-between">
-                                    <!-- Titulo de preguntas -->
-                                    <label class="form-label col-md-3">Consistencia</label>
-                                    <!-- Loop de preguntas -->
+                                    <label class="form-label col-md-3">Sitios recreativos</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="1" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            1
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="sitios1" id="sitios1"
+                                            value="1" required>
+                                        <label class="form-check-label" for="sitios1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            2
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="sitios1" id="sitios2"
+                                            value="2">
+                                        <label class="form-check-label" for="sitios2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            3
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="sitios1" id="sitios3"
+                                            value="3">
+                                        <label class="form-check-label" for="sitios3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="2" name="consistencia" id="consistencia">
-                                        <label class="form-check-label" for="consistencia">
-                                            4
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="sitios1" id="sitios4"
+                                            value="4">
+                                        <label class="form-check-label" for="sitios4">4</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <!-- Grupo de preguntas -->
+
                                 <div class="d-flex justify-content-between">
-                                    <!-- Titulo de preguntas -->
-                                    <label class="form-label col-md-3">Valoracion neta</label>
-                                    <!-- Loop de preguntas -->
+                                    <label class="form-label col-md-3">Claridad</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="1" name="valoracion_neta_1[]" id="valoracion_neta-1-1">
-                                        <label class="form-check-label" for="valoracion_neta-1-1">
-                                            1
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="claridad1" id="claridad1"
+                                            value="1" required>
+                                        <label class="form-check-label" for="claridad1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="2" name="valoracion_neta_1[]" id="valoracion_neta-1-2">
-                                        <label class="form-check-label" for="valoracion_neta-1-2">
-                                            2
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="claridad1" id="claridad2"
+                                            value="2">
+                                        <label class="form-check-label" for="claridad2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="3" name="valoracion_neta_1[]" id="valoracion_neta-1-3">
-                                        <label class="form-check-label" for="valoracion_neta-1-3">
-                                            3
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="claridad1" id="claridad3"
+                                            value="3">
+                                        <label class="form-check-label" for="claridad3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="4" name="valoracion_neta_1[]" id="valoracion_neta-1-4">
-                                        <label class="form-check-label" for="valoracion_neta-1-4">
-                                            4
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="claridad1" id="claridad4"
+                                            value="4">
+                                        <label class="form-check-label" for="claridad4">4</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <!-- Grupo de preguntas -->
                                 <div class="d-flex justify-content-between">
-                                    <!-- Titulo de preguntas -->
-                                    <label class="form-label col-md-3">Valoracion neta</label>
-                                    <!-- Loop de preguntas -->
+                                    <label class="form-label col-md-3">Desempeño</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="1" name="valoracion_neta_2[]" id="valoracion_neta-2-1">
-                                        <label class="form-check-label" for="valoracion_neta-2-1">
-                                            1
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="desempeno1" id="desempeno1"
+                                            value="1" required>
+                                        <label class="form-check-label" for="desempeno1">1</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="2" name="valoracion_neta_2[]" id="valoracion_neta-2-2">
-                                        <label class="form-check-label" for="valoracion_neta-2-2">
-                                            2
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="desempeno1" id="desempeno2"
+                                            value="2">
+                                        <label class="form-check-label" for="desempeno2">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="3" name="valoracion_neta_2[]" id="valoracion_neta-2-3">
-                                        <label class="form-check-label" for="valoracion_neta-2-3">
-                                            3
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="desempeno1" id="desempeno3"
+                                            value="3">
+                                        <label class="form-check-label" for="desempeno3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input valoracion-grupo" type="checkbox" value="4" name="valoracion_neta_2[]" id="valoracion_neta-2-4">
-                                        <label class="form-check-label" for="valoracion_neta-2-4">
-                                            4
-                                        </label>
+                                        <input class="form-check-input grupo3" type="radio" name="desempeno1" id="desempeno4"
+                                            value="4">
+                                        <label class="form-check-label" for="desempeno4">4</label>
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                // Evitar que se repitan valores entre los dos grupos de checks
-                                function actualizarCheckboxes() {
-                                    // Obtener los valores seleccionados en cada grupo
-                                    const grupo1 = document.querySelectorAll('input[name="valoracion_neta_1[]"]');
-                                    const grupo2 = document.querySelectorAll('input[name="valoracion_neta_2[]"]');
-                                    const seleccionados1 = Array.from(grupo1).filter(cb => cb.checked).map(cb => cb.value);
-                                    const seleccionados2 = Array.from(grupo2).filter(cb => cb.checked).map(cb => cb.value);
-
-                                    // Deshabilitar en grupo2 los valores seleccionados en grupo1
-                                    grupo2.forEach(cb => {
-                                        if (seleccionados1.includes(cb.value)) {
-                                            cb.selected = false;
-                                            cb.checked = false;
-                                        } else {
-                                            cb.disabled = false;
-                                        }
-                                    });
-
-                                    // Deshabilitar en grupo1 los valores seleccionados en grupo2
-                                    grupo1.forEach(cb => {
-                                        if (seleccionados2.includes(cb.value)) {
-                                            cb.selected = false;
-                                            cb.checked = false;
-                                        } else {
-                                            cb.disabled = false;
-                                        }
-                                    });
-                                }
-
-                                document.querySelectorAll('input.valoracion-grupo').forEach(cb => {
-                                    cb.addEventListener('change', actualizarCheckboxes);
-                                });
-                            </script>
                         </div>
-                        <div class="form-text text-danger" id="grupo2Error"></div>
+                        <div class="form-text text-danger" id="grupo3Error"></div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button> <button type="clean" class="btn btn-secondary">Cancelar</button>
                 </form>
             </div>
         </div>
@@ -509,38 +440,6 @@
 
     <?php include 'Plantilla/footer.php'; ?>
 
-    <script>
-        // Validación para que no se repitan valores en los grupos de select
-        function validarGrupo(clase, errorId) {
-            const selects = document.querySelectorAll('select.' + clase);
-            const valores = Array.from(selects).map(s => s.value);
-            const valoresSinVacios = valores.filter(v => v !== "");
-            const set = new Set(valoresSinVacios);
-            if (valoresSinVacios.length !== set.size) {
-                document.getElementById(errorId).textContent = "No puedes repetir valores en este grupo.";
-                return false;
-            } else {
-                document.getElementById(errorId).textContent = "";
-                return true;
-            }
-        }
-
-        document.getElementById('evaluacionForm').addEventListener('submit', function(e) {
-            const grupo1Valido = validarGrupo('grupo1', 'grupo1Error');
-            const grupo2Valido = validarGrupo('grupo2', 'grupo2Error');
-            if (!grupo1Valido || !grupo2Valido) {
-                e.preventDefault();
-            }
-        });
-
-        // Validar en tiempo real
-        document.querySelectorAll('select.grupo1').forEach(sel => {
-            sel.addEventListener('change', () => validarGrupo('grupo1', 'grupo1Error'));
-        });
-        document.querySelectorAll('select.grupo2').forEach(sel => {
-            sel.addEventListener('change', () => validarGrupo('grupo2', 'grupo2Error'));
-        });
-    </script>
     <script>
         // Validación para que no se repitan valores en los grupos de radio
         function validarRadiosGrupo(clase, errorId) {
@@ -573,6 +472,7 @@
         document.getElementById('evaluacionForm').addEventListener('submit', function(e) {
             const grupo1Valido = validarRadiosGrupo('grupo1', 'grupo1Error');
             const grupo2Valido = validarRadiosGrupo('grupo2', 'grupo2Error');
+            const grupo3Valido = validarRadiosGrupo('grupo3', 'grupo3Error');
             if (!grupo1Valido || !grupo2Valido) {
                 e.preventDefault();
             }
@@ -584,6 +484,9 @@
         });
         document.querySelectorAll('.grupo2').forEach(radio => {
             radio.addEventListener('change', () => validarRadiosGrupo('grupo2', 'grupo2Error'));
+        });
+        document.querySelectorAll('.grupo3').forEach(radio => {
+            radio.addEventListener('change', () => validarRadiosGrupo('grupo3', 'grupo3Error'));
         });
     </script>
 </body>

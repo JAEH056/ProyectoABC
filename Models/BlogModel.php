@@ -3,12 +3,10 @@
 namespace App\Models;
 
 require_once 'Database/Database.php';
-require_once 'Models/BaseModel.php';
 
 use App\Database\Database;
-use App\Models\BaseModel;
 
-class BlogModel extends BaseModel
+class BlogModel
 {
     private $db;
     private $table;
@@ -16,8 +14,7 @@ class BlogModel extends BaseModel
 
     public function __construct()
     {
-        //$this->db = new Database();
-        parent::__construct();
+        $this->db = new Database();
         $this->table = 'posts';
         $this->fields = ['id', 'titulo', 'contenido', 'idusuario', 'fecha_creacion', 'fecha_actualizacion'];
     }
