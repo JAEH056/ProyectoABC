@@ -47,7 +47,8 @@ class Router
                 }
 
                 // Llamar al controlador con parámetros dinámicos si aplica
-                return $controller->$action(...$matches);
+                return $controller->$action(...array_map('intval', $matches)); 
+                //return $controller->$action(...$matches);
             }
         }
 

@@ -43,7 +43,7 @@ function detectarGrupos() {
         // Obtener clases del input y filtrar las que match 'grupoX' (X = número)
         const clases = input.className.split(' '); // Split por espacios
         clases.forEach(clase => {
-            if (clase.match(/^grupo\d+$/)) { // Regex: 'grupo' seguido de dígitos (e.g., grupo1, grupo10)
+            if (clase.match(/^grupo\d+$/)) { // Regex: 'grupo' seguido de dígitos (e.g., grupo1, ..., grupo10)
                 grupos.add(clase);
             }
         });
