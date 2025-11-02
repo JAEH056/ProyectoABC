@@ -19,9 +19,9 @@ $form = new Formulario();
 </head>
 
 <body>
-    <?php include 'Plantilla/header.php'; ?>
+    <?php include 'Views/Plantilla/header.php'; ?>
 
-    <div class="container mt-5 col-8">
+    <div class="container mt-5 col-10">
         <div class="card">
             <div class="card-header">
                 <h2 class="mb-4">Datos del ususario</h2>
@@ -35,17 +35,22 @@ $form = new Formulario();
                                 <h4 class="alert-heading">Crear nuevo usuario</h4>
                                 <p>Ingresa los datos solicitados.</p>
                             </div>
-                            <form id="evaluacionForm" method="POST">
+                            <!-- Mensajes de retroalimentacion -->
+                            <?php if ($mensaje): ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong><?php echo addslashes($mensaje); ?></strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php unset($_SESSION['mensaje']); endif; ?>
+                            <?php if ($error): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong><?php echo addslashes($error); ?></strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php unset($_SESSION['error']); endif; ?>
+                            <form id="evaluacionForm" action="/create-user" method="POST">
                                 <!-- Form Row-->
                                 <div class="row gx-3">
-                                    <!-- Form Group (correo electronico)-->
-                                    <div class="mb-3">
-                                        <label class="small mb-1" for="email">Correo electronico</label>
-                                        <input class="form-control" id="email" type="text"
-                                            placeholder="Correo electronico" name="email" required
-                                            title="Ingrese los datos necesarios"
-                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
-                                    </div>
                                     <!-- Form Group (nombre)-->
                                     <div class="mb-3">
                                         <label class="small mb-1" for="nombre">Nombre(s)</label>
@@ -83,7 +88,7 @@ $form = new Formulario();
                                 <div class="row gx-3">
                                     <div class="mb-3">
                                         <label for="nivel-academico" class="small mb-1">Nivel Academico</label>
-                                        <input type="text" class="form-control" id="nivel-academico" name="nivel-academico" required
+                                        <input type="text" class="form-control" id="nivel-academico" name="nivel" required
                                             placeholder="Ingresa el nivel academico"
                                             title="Ingrese los datos necesarios">
                                     </div>
@@ -112,7 +117,7 @@ $form = new Formulario();
         </div>
     </div>
 
-    <?php include 'Plantilla/footer.php'; ?>
+    <?php include 'Views/Plantilla/footer.php'; ?>
 
     <script src="Resources/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="Resources/js/formCheck.js" type="text/javascript"></script>

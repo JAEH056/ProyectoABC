@@ -20,22 +20,56 @@ class Formulario extends BaseController
         $this->eval3 = new PreguntasModel();
     }
 
-    public function index()
+    /**
+     * Devuelve la vista de la evaluacion del test 2
+     * @return void
+     */
+    public function evalTest2()
     {
-        $this->render('usuario');
+        $mensaje = $_SESSION['mensaje'] ?? '';
+        $error = $_SESSION['error'] ?? '';
+        $this->render('Formulario/formularioTest2', [
+            'mensaje' => $mensaje,
+            'error' => $error
+        ]);
     }
 
-    public function vistaFormularios()
+    /**
+     * Devuelve la vista de la evaluacion del test 3
+     * @return void
+     */
+    public function evalTest3()
     {
-        $this->render('formulario');
+        $mensaje = $_SESSION['mensaje'] ?? '';
+        $error = $_SESSION['error'] ?? '';
+        $this->render('Formulario/formularioTest3', [
+            'mensaje' => $mensaje,
+            'error' => $error
+        ]);
+    }
+
+    /**
+     * Renderiza las preguntas (Test 2) ya renderizado
+     */
+    public function formTest2()
+    {
+        $datosTest = $this->eval2->getEvalTest2();
+
+        $mensaje = $_SESSION['mensaje'] ?? '';
+        $error = $_SESSION['error'] ?? '';
+        return $this->render('Formulario/campoTest2', [
+            'mensaje' => $mensaje,
+            'error' => $error,
+            'datosTest' => $datosTest,
+        ]);
     }
 
     /**
      * Muestra el formulario de preguntas (Test 3) ya renderizado
      */
-    public function formularioTest3()
+    public function formTest3()
     {
-        $datosTest = self::datosFormTest3();
+        $datosTest = self::dataFieldTest3();
 
         $mensaje = $_SESSION['mensaje'] ?? '';
         $error = $_SESSION['error'] ?? '';
@@ -50,7 +84,7 @@ class Formulario extends BaseController
      * Sanitiza los datos del Test3
      * @return array{descripcion: string, preguntas: array}
      */
-    public function datosFormTest3(): array
+    public function dataFieldTest3(): array
     {
         $formPreguntas = $this->eval3->getEvalTest3();
 
@@ -73,21 +107,5 @@ class Formulario extends BaseController
             $dataForm[] = $dataItem;
         }
         return $dataForm;
-    }
-
-    /**
-     * Muestra el formulario de preguntas (Test 2) ya renderizado
-     */
-    public function formularioTest2()
-    {
-        $datosTest = $this->eval2->getEvalTest2();
-
-        $mensaje = $_SESSION['mensaje'] ?? '';
-        $error = $_SESSION['error'] ?? '';
-        return $this->render('Formulario/campoTest2', [
-            'mensaje' => $mensaje,
-            'error' => $error,
-            'datosTest' => $datosTest,
-        ]);
     }
 }

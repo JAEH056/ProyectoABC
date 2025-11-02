@@ -74,27 +74,28 @@ unset($_SESSION['error']);
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    if (empty($posts)):
-                                        echo "<tr><td colspan='6' class='text-center'>No hay datos disponibles.</td></tr>";
-                                    else:
-                                        foreach ($posts as $post) {
-                                            echo "<tr>
-                                                <td>{$post['id']}</td>
-                                                <td>{$post['titulo']}</td>
-                                                <td>{$post['contenido']}</td>
-                                                <td>{$post['fecha_creacion']}</td>
-                                                <td>{$post['fecha_actualizacion']}</td>
+                                    <?php if (empty($posts)): ?>
+                                        <tr>
+                                            <td colspan='6' class='text-center'>No hay datos disponibles.</td>
+                                        </tr>
+                                        <?php else:
+                                        foreach ($posts as $post) { ?>
+                                            <tr>
+                                                <td><?= $post['id'] ?></td>
+                                                <td><?= $post['titulo'] ?></td>
+                                                <td><?= $post['contenido'] ?></td>
+                                                <td><?= $post['fecha_creacion'] ?></td>
+                                                <td><?= $post['fecha_actualizacion'] ?></td>
                                                 <td>
-                                                    <button type='button' class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#editModal' data-id='{$post['id']}' data-titulo='{$post['titulo']}' data-contenido='{$post['contenido']}'>
+                                                    <button type='button' class='btn btn-success btn-sm' data-bs-toggle='modal' data-bs-target='#editModal' data-id='<?= $post['id'] ?>' data-titulo='<?= $post['titulo'] ?>' data-contenido='<?= $post['contenido'] ?>'>
                                                         <i class='bi bi-pencil-square'></i> Editar
                                                     </button>
-                                                    <button type='button' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#deleteModal' data-id='{$post['id']}'>
+                                                    <button type='button' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#deleteModal' data-id='<?= $post['id'] ?>'>
                                                         <i class='bi bi-trash'></i> Eliminar
                                                     </button>
                                                 </td>
-                                            </tr>";
-                                        }
+                                            </tr>
+                                    <?php   }
                                     endif;
                                     ?>
                                 </tbody>

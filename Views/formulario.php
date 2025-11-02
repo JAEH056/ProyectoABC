@@ -49,7 +49,7 @@ $form = new Formulario();
                                     <!-- Grupo de preguntas -->
                                     <section class="mb-4">
                                         <h3 class="h5 mb-3 text-start">Preguntas de Evaluación</h3>
-                                        <?php $form->formularioTest2(); ?>
+                                        <?php $form->formTest2(); ?>
                                     </section>
 
                                     <div class="d-flex justify-content-between">
@@ -69,7 +69,7 @@ $form = new Formulario();
                                     <!-- Grupo de preguntas -->
                                     <section class="mb-4">
                                         <h3 class="h5 mb-3 text-start">Preguntas de Evaluación</h3>
-                                        <?php $form->formularioTest3(); ?>
+                                        <?php $form->formTest3(); ?>
                                     </section>
                                     <div class="d-flex justify-content-between">
                                         <button type="reset" class="btn btn-light">Cancelar</button>

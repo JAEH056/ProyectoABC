@@ -62,7 +62,7 @@ class Controller extends BaseController
      */
     public function read(): array
     {
-        return $this->blogModel->getPosts();
+        return []; //$this->blogModel->getPosts();
     }
 
     /**
