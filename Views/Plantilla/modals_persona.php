@@ -1,9 +1,9 @@
-<!-- Modal para Nuevo Usuario -->
+<!-- Modal para Nueva Persona -->
 <div class="modal modal-lg fade" id="newModalUser" tabindex="-1" role="dialog" aria-labelledby="newModalUserLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
-                <h5 class="modal-title text-light" id="newModalUserLabel">Crear Usuario</h5>
+                <h5 class="modal-title text-light" id="newModalUserLabel">Crear Persona</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -67,12 +67,12 @@
         </div>
     </div>
 </div>
-<!-- Modal para Editar -->
+<!-- Modal para Editar Persona -->
 <div class="modal modal-lg fade" id="editModalUser" tabindex="-1" role="dialog" aria-labelledby="editModalUserLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-success">
-                <h5 class="modal-title text-light" id="editModalUserLabel">Editar Usuario</h5>
+                <h5 class="modal-title text-light" id="editModalUserLabel">Editar Persona</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -137,16 +137,16 @@
         </div>
     </div>
 </div>
-<!-- Modal para Eliminar -->
+<!-- Modal para Eliminar Persona -->
 <div class="modal fade" id="deleteModalUser" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-danger">
-                <h5 class="modal-title text-light" id="deleteModalUserLabel">Eliminar Usuario</h5>
+                <h5 class="modal-title text-light" id="deleteModalUserLabel">Eliminar Persona</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="body-msg" class="modal-body">
-                ¿Estás seguro de que deseas eliminar este Usuario?
+                ¿Estás seguro de que deseas eliminar esta Persona?
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="POST" action="/delete-user">

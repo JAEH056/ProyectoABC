@@ -6,7 +6,7 @@ require_once 'Database/Database.php';
 
 use App\Database\Database;
 
-class UsuarioModel
+class PersonaModel
 {
     private $db;
 
@@ -16,10 +16,10 @@ class UsuarioModel
     }
 
     /**
-     * Devuelve las Preguntas y respuestas del Test 3
+     * Devuelve la lista de personas activas
      * @return array
      */
-    public function getUsuarios(): array
+    public function getPersonas(): array
     {
         $connection = $this->db->getConnection();
         $result = $connection->query(
@@ -32,13 +32,13 @@ class UsuarioModel
     }
 
     /**
-     * Guarda los datos del usuario
-     * @param array $userInfo
+     * Guarda los datos de la persona
+     * @param array $personaInfo
      * @return bool
      */
-    public function guardarUsuario(array $userInfo = []): bool
+    public function guardarPersona(array $personaInfo = []): bool
     {
-        if (empty($userInfo)) {
+        if (empty($personaInfo)) {
             return false;
         }
 
@@ -46,7 +46,7 @@ class UsuarioModel
         $connection = $this->db->getConnection();
 
         // Extraer columnas y preparar placeholders
-        $columns = array_keys($userInfo);
+        $columns = array_keys($personaInfo);
         $placeholders = array_fill(0, count($columns), '?');
         $types = str_repeat('s', count($columns)); // Para todos los parametros se usa string
 
@@ -60,7 +60,7 @@ class UsuarioModel
         }
 
         // Vincular parámetros dinámicamente
-        $values = array_values($userInfo);
+        $values = array_values($personaInfo);
         $stmt->bind_param($types, ...$values);
 
         $result = $stmt->execute();
@@ -70,7 +70,7 @@ class UsuarioModel
         return $result;
     }
 
-    public function getUserCount(): array
+    public function getPersonaCount(): array
     {
         $connection = $this->db->getConnection();
         $result = $connection->query("SELECT COUNT(*) AS total FROM db_cognos.persona;");
@@ -81,7 +81,7 @@ class UsuarioModel
     }
 
     /**
-     * Modifica el estado del usuario
+     * Modifica el estado de la persona
      * @return bool
      */
     public function updateStatus(string $id): bool
@@ -101,22 +101,22 @@ class UsuarioModel
     }
 
     /**
-     * Actualiza los datos del usuario
-     * @param string $id ID del usuario
-     * @param array $infoUser Datos del usuario
+     * Actualiza los datos de la persona
+     * @param string $id ID de la persona
+     * @param array $infoPersona Datos de la persona
      * @return bool
      */
-    public function updateUser(string $id, array $infoUser): bool
+    public function updatePersona(string $id, array $infoPersona): bool
     {
         $connection = $this->db->getConnection();
         $stmt = $connection->prepare("UPDATE persona SET nombre = ?, apellido = ?, curp = ?, rfc = ?, nivel_academico = ?, perfil_profesional = ? WHERE id_persona = ?");
         // Desempaquetar valores del array (asegurar orden correcto)
-        $nombre = $infoUser['nombre'];
-        $apellido = $infoUser['apellido'];
-        $curp = $infoUser['curp'];
-        $rfc = $infoUser['rfc'];
-        $nivelAcademico = $infoUser['nivel_academico'];
-        $perfilProfesional = $infoUser['perfil_profesional'];
+        $nombre = $infoPersona['nombre'];
+        $apellido = $infoPersona['apellido'];
+        $curp = $infoPersona['curp'];
+        $rfc = $infoPersona['rfc'];
+        $nivelAcademico = $infoPersona['nivel_academico'];
+        $perfilProfesional = $infoPersona['perfil_profesional'];
 
         $stmt->bind_param("sssssss", $nombre, $apellido, $curp, $rfc, $nivelAcademico, $perfilProfesional, $id);
 

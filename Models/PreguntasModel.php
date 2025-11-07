@@ -46,7 +46,7 @@ class PreguntasModel
 	                FROM db_cognos.det_pregunta
                     JOIN db_cognos.pregunta ON pregunta.id_pregunta = det_pregunta.id_pregunta
                     JOIN db_cognos.test ON pregunta.id_test = test.id_test
-                    WHERE test.nombre = 'test2';"
+                    WHERE test.nombre = 'Kostick';"
         )->fetch_all(MYSQLI_ASSOC);
         $this->db->closeConnection();
 

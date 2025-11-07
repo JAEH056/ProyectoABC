@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const name = button.getAttribute('data-user-name');
         // Actualiza el contenido del modal
         document.getElementById('deleteUserId').value = id;
-        document.getElementById("body-msg").innerHTML = `<p>¿Estás seguro de que deseas eliminar el usuario (<strong>${name}</strong>)?</p>`;
+        document.getElementById("body-msg").innerHTML = `<p>¿Estás seguro de que deseas eliminar esta persona (<strong>${name}</strong>)?</p>`;
     });
 
 });

@@ -24,7 +24,7 @@ $form = new Formulario();
     <div class="container mt-5 col-10">
         <div class="card">
             <div class="card-header">
-                <h2 class="mb-4">Evaluación</h2>
+                <h2 class="mb-4">Test 3: Zavic</h2>
             </div>
             <div class="card-body">
                 <main>
@@ -41,14 +41,16 @@ $form = new Formulario();
                                     <strong><?php echo addslashes($mensaje); ?></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                            <?php unset($_SESSION['mensaje']); endif; ?>
+                            <?php unset($_SESSION['mensaje']);
+                            endif; ?>
                             <?php if ($error): ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong><?php echo addslashes($error); ?></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                            <?php unset($_SESSION['error']); endif; ?>
-                            <form id="evaltest2">
+                            <?php unset($_SESSION['error']);
+                            endif; ?>
+                            <form id="evaluacionTestZabic">
                                 <!-- Grupo de preguntas -->
                                 <section class="mb-4">
                                     <?php $form->formTest3(); ?>

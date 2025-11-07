@@ -1,14 +1,10 @@
-<?php
-
-namespace Views\Usuario;
-?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluacion de Personal</title>
+    <title>Lista de personas</title>
     <!-- Hojas de estilo -->
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -18,14 +14,14 @@ namespace Views\Usuario;
 
 <body>
     <?php include 'Views/Plantilla/header.php'; ?>
-    <?php include 'Views/Plantilla/modals_usuario.php'; ?>
+    <?php include 'Views/Plantilla/modals_persona.php'; ?>
 
     <div class="container mt-5 col-10">
         <div class="card">
             <div class="card-header">
                 <div class="row d-flex justify-content-between align-items-end">
                     <div class="col-sm-6">
-                        <h2 class="mb-4">Lista de usuarios</h2>
+                        <h2 class="mb-4">Lista de personas</h2>
                     </div>
                     <div class="col-sm-auto d-flex gap-2">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModalUser"><i class="bi bi-plus-circle"></i> Nuevo</button>
@@ -100,7 +96,7 @@ namespace Views\Usuario;
 
     <?php include 'Views/Plantilla/footer.php'; ?>
 
-    <script src="Resources/js/userModals.js" type="text/javascript"></script>
+    <script src="Resources/js/personaModals.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 

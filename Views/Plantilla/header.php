@@ -4,21 +4,21 @@
         <ul class="col-12 nav nav-tabs" id="navId" role="tablist">
             <li class="nav-item" role="presentation">
                 <a href="/" class="nav-link">
-                    Lista Usuarios
+                    Lista de personas
                 </a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="/nuevo-usuario" class="nav-link">
-                    Nuevo usuario
+                <a href="/nueva-persona" class="nav-link">
+                    Nueva persona
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/test2">
+                <a class="nav-link" href="/test-kostick">
                     Test 2
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/test3">
+                <a class="nav-link" href="/test-zavic">
                     Test 3
                 </a>
             </li>

@@ -21,7 +21,7 @@ class Formulario extends BaseController
     }
 
     /**
-     * Devuelve la vista de la evaluacion del test 2
+     * Devuelve la vista de la evaluacion del test 2 (Kostick)
      * @return void
      */
     public function evalTest2()
@@ -35,7 +35,7 @@ class Formulario extends BaseController
     }
 
     /**
-     * Devuelve la vista de la evaluacion del test 3
+     * Devuelve la vista de la evaluacion del test 3 (Zavic)
      * @return void
      */
     public function evalTest3()
@@ -49,7 +49,7 @@ class Formulario extends BaseController
     }
 
     /**
-     * Renderiza las preguntas (Test 2) ya renderizado
+     * Renderiza las preguntas (Kostick) ya renderizado
      */
     public function formTest2()
     {
@@ -65,7 +65,7 @@ class Formulario extends BaseController
     }
 
     /**
-     * Muestra el formulario de preguntas (Test 3) ya renderizado
+     * Muestra el formulario de preguntas (Zavic) ya renderizado
      */
     public function formTest3()
     {
@@ -81,7 +81,7 @@ class Formulario extends BaseController
     }
 
     /**
-     * Sanitiza los datos del Test3
+     * Sanitiza los datos del Test3 (Zavic)
      * @return array{descripcion: string, preguntas: array}
      */
     public function dataFieldTest3(): array

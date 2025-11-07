@@ -24,7 +24,7 @@ $form = new Formulario();
     <div class="container mt-5 col-10">
         <div class="card">
             <div class="card-header">
-                <h2 class="mb-4">Evaluación</h2>
+                <h2 class="mb-4">Test 2: Kostick</h2>
             </div>
             <div class="card-body">
                 <main>
@@ -41,13 +41,15 @@ $form = new Formulario();
                                     <strong><?php echo addslashes($mensaje); ?></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                            <?php unset($_SESSION['mensaje']); endif; ?>
+                            <?php unset($_SESSION['mensaje']);
+                            endif; ?>
                             <?php if ($error): ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong><?php echo addslashes($error); ?></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
-                            <?php unset($_SESSION['error']); endif; ?>
+                            <?php unset($_SESSION['error']);
+                            endif; ?>
                             <form id="evaltest2">
                                 <!-- Grupo de preguntas -->
                                 <section class="mb-4">
@@ -69,7 +71,6 @@ $form = new Formulario();
     <?php include 'Views/Plantilla/footer.php'; ?>
 
     <script src="Resources/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <script src="Resources/js/formCheck.js" type="text/javascript"></script>
 
 </body>
 

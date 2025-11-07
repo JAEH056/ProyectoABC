@@ -38,8 +38,8 @@ function adjuntarListenersChange(grupo) {
 // Función para detectar grupos automáticamente (Todo se hace de manera dinamica)
 function detectarGrupos() {
     const grupos = new Set(); // Set para únicos
-    // Se buscan todos los radios en el formulario
-    document.querySelectorAll('#evaluacionForm input[type="radio"]').forEach(input => {
+    // Se buscan todos los radios en el formulario (ID del formulario)
+    document.querySelectorAll('#evaluacionTestZabic input[type="radio"]').forEach(input => {
         // Obtener clases del input y filtrar las que match 'grupoX' (X = número)
         const clases = input.className.split(' '); // Split por espacios
         clases.forEach(clase => {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Manejador de submit optimizado (validación dinámica para TODOS los grupos)
-    document.getElementById('evaluacionForm').addEventListener('submit', function (e) {
+    document.getElementById('evaluacionTestZabic').addEventListener('submit', function (e) {
         let esValido = true; // Booleano general
 
         grupos.forEach(grupo => {

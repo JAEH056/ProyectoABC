@@ -10,7 +10,7 @@ $form = new Formulario();
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Evaluación</title>
+    <title>Creacion Persona</title>
     <link href="Resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- fontawsome icons -->
     <link href="Resources/css/fontawesome/css/fontawesome.css" rel="stylesheet" />
@@ -24,7 +24,7 @@ $form = new Formulario();
     <div class="container mt-5 col-10">
         <div class="card">
             <div class="card-header">
-                <h2 class="mb-4">Datos del ususario</h2>
+                <h2 class="mb-4">Datos de la persona</h2>
             </div>
             <div class="card-body">
                 <main>
@@ -32,7 +32,7 @@ $form = new Formulario();
                         <div class="col-12 col-md-10 col-lg-8 mx-auto">
                             <!-- Envia la lista de errores al formulario -->
                             <div class="alert alert-success" role="alert">
-                                <h4 class="alert-heading">Crear nuevo usuario</h4>
+                                <h4 class="alert-heading">Crear nueva persona</h4>
                                 <p>Ingresa los datos solicitados.</p>
                             </div>
                             <!-- Mensajes de retroalimentacion -->

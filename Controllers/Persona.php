@@ -2,56 +2,54 @@
 
 namespace App\Controllers;
 
-require_once 'Models/UsuarioModel.php';
+require_once 'Models/PersonaModel.php';
 require_once 'Controllers/BaseController.php';
 
 use App\Controllers\BaseController;
-use App\Models\UsuarioModel;
+use App\Models\PersonaModel;
 
-class User extends BaseController
+class Persona extends BaseController
 {
-    private $usuario;
-    private $usuario2;
+    private $personaM;
 
     public function __construct()
     {
         parent::__construct();
-        $this->usuario = new UsuarioModel();
-        $this->usuario2 = new UsuarioModel(); // Se vuelve a llamar el modelo para reconectar
+        $this->personaM = new PersonaModel();
     }
 
     /**
-     * Vista procipal de la lista de usuarios
+     * Vista principal de la lista de personas
      * @return void
      */
     public function index()
     {
-        $usuarios = $this->usuario->getUsuarios();
+        $personas = $this->personaM->getPersonas();
         $mensaje = $_SESSION['mensaje'] ?? '';
         $error = $_SESSION['error'] ?? '';
-        $this->render('Usuario/listaUsuarios', [
-            'usuarios' => $usuarios,
+        $this->render('Persona/listaPersonas', [
+            'usuarios' => $personas,
             'mensaje' => $mensaje,
             'error' => $error
         ]);
     }
 
     /**
-     * Devuelve la vista del formulario para crear un nuevo usuario
+     * Devuelve la vista del formulario para crear una nueva persona
      * @return void
      */
-    public function viewNewUser()
+    public function viewNewPersona()
     {
         $mensaje = $_SESSION['mensaje'] ?? '';
         $error = $_SESSION['error'] ?? '';
-        $this->render('Usuario/nuevoUsuario', [
+        $this->render('Persona/nuevaPersona', [
             'mensaje' => $mensaje,
             'error' => $error
         ]);
     }
 
     /**
-     * Crea un nuevo usuario
+     * Crea una nueva persona
      * @return null
      */
     public function create()
@@ -63,7 +61,7 @@ class User extends BaseController
         }
 
         $data = [
-            'id_persona'    => self::genUserId(),
+            'id_persona'    => self::genPersonaId(),
             'nombre'        => $_POST['nombre'],
             'apellido'      => $_POST['apellidos'],
             'curp'          => $_POST['curp'],
@@ -74,25 +72,25 @@ class User extends BaseController
             'status'        => 1,
         ];
 
-        if (!$this->usuario->guardarUsuario($data)) {
-            $_SESSION['error'] = "Error al guardar el usuario.";
+        if (!$this->personaM->guardarPersona($data)) {
+            $_SESSION['error'] = "Error al guardar la persona.";
             header("Location: /");
             return exit();
         }
         // Redirige o muestra un mensaje de éxito
-        $_SESSION['mensaje'] = "Usuario creado con exito.";
+        $_SESSION['mensaje'] = "Persona creada con exito.";
         header("Location: /");
         return exit();
     }
 
     /**
-     * Genera el ID del Usuario
+     * Genera el ID de la Persona
      * @param string $acronimo
      * @return string
      */
-    public function genUserId(string $acronimo = 'PER'): string
+    public function genPersonaId(string $acronimo = 'PER'): string
     {
-        $numeroConsecutivo = $this->usuario2->getUserCount();
+        $numeroConsecutivo = $this->personaM->getPersonaCount();
         // Formatear número con ceros a la izquierda (mínimo 3 dígitos) y formatear fecha y hora
         $numeroFormateado = str_pad($numeroConsecutivo['total'] + 1, 3, '0', STR_PAD_LEFT);
         $fechaHora = date('dmYHis');
@@ -101,36 +99,36 @@ class User extends BaseController
     }
 
     /**
-     * Elimina un usuario
+     * Elimina una persona
      * @return null
      */
     public function delete()
     {
         if (!isset($_POST['user-id'])) {
-            $_SESSION['error'] = "ID del usuario no proporcionado";
+            $_SESSION['error'] = "ID de persona no proporcionado";
             header("Location: /");
             return exit();
         }
 
-        if (!$this->usuario->updateStatus($_POST['user-id'])) {
-            $_SESSION['error'] = "Error al eliminar el usuario.";
+        if (!$this->personaM->updateStatus($_POST['user-id'])) {
+            $_SESSION['error'] = "Error al eliminar la persona.";
             header("Location: /");
             return exit();
         }
         // Redirige o muestra un mensaje de éxito
-        $_SESSION['mensaje'] = "Usuario eliminado correctamente.";
+        $_SESSION['mensaje'] = "Persona eliminada correctamente.";
         header("Location: /");
         return exit();
     }
 
     /**
-     * Actualiza los datos de un usuario
+     * Actualiza los datos de una persona
      * @return null
      */
     public function update()
     {
         if (!isset($_POST['user-id'])) {
-            $_SESSION['error'] = "ID del usuario no proporcionado";
+            $_SESSION['error'] = "ID de persona no proporcionado";
             header("Location: /");
             return exit();
         }
@@ -144,13 +142,13 @@ class User extends BaseController
             'perfil_profesional'    => $_POST['perfil'],
         ];
 
-        if (!$this->usuario->updateUser($_POST['user-id'],$data)) {
-            $_SESSION['error'] = "Error al eliminar el usuario.";
+        if (!$this->personaM->updatePersona($_POST['user-id'], $data)) {
+            $_SESSION['error'] = "Error al eliminar la persona.";
             header("Location: /");
             return exit();
         }
         // Redirige o muestra un mensaje de éxito
-        $_SESSION['mensaje'] = "Datos de usuario actualizados correctamente.";
+        $_SESSION['mensaje'] = "Datos de la persona actualizados correctamente.";
         header("Location: /");
         return exit();
     }
