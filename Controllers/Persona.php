@@ -3,10 +3,12 @@
 namespace App\Controllers;
 
 require_once 'Models/PersonaModel.php';
+require_once 'Models/CRUDPersonaModel.php';
 require_once 'Controllers/BaseController.php';
 
 use App\Controllers\BaseController;
-use App\Models\PersonaModel;
+use App\Models\PersonaModel; 
+use App\Models\CRUDPersonaModel;
 
 class Persona extends BaseController
 {
@@ -15,7 +17,8 @@ class Persona extends BaseController
     public function __construct()
     {
         parent::__construct();
-        $this->personaM = new PersonaModel();
+        //$this->personaM = new PersonaModel();
+        $this->personaM = new CRUDPersonaModel();
     }
 
     /**

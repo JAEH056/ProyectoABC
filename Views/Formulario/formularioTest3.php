@@ -1,10 +1,3 @@
-<?php
-require_once 'Controllers/Formulario.php';
-
-use App\Controllers\Formulario;
-
-$form = new Formulario();
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -53,7 +46,7 @@ $form = new Formulario();
                             <form id="evaluacionTestZabic">
                                 <!-- Grupo de preguntas -->
                                 <section class="mb-4">
-                                    <?php $form->formTest3(); ?>
+                                    <?php htmlspecialchars( $form->formTest3()); ?>
                                 </section>
 
                                 <div class="d-flex justify-content-between">

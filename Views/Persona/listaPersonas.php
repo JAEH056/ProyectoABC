@@ -73,13 +73,15 @@
                                                 <td><?= htmlspecialchars($row['rfc'] ?? '') ?></td>
                                                 <td><?= htmlspecialchars($row['nivel_academico'] ?? '') ?></td>
                                                 <td><?= htmlspecialchars($row['perfil_profesional'] ?? '') ?></td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModalUser" data-user="<?= htmlspecialchars(json_encode($row, JSON_HEX_APOS | JSON_HEX_QUOT)) ?>">
-                                                        <i class='bi bi-pencil-square'></i> Editar
-                                                    </button>
-                                                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModalUser" data-user-id="<?= htmlspecialchars($row['ID']) ?>" data-user-name="<?= htmlspecialchars($row['nombre'] . ' ' . $row['apellido']) ?>">
-                                                        <i class='bi bi-trash'></i> Eliminar
-                                                    </button>
+                                                <td style="width: 16%;">
+                                                    <div class="d-inline-block">
+                                                        <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModalUser" data-user="<?= htmlspecialchars(json_encode($row, JSON_HEX_APOS | JSON_HEX_QUOT)) ?>">
+                                                            <i class='bi bi-pencil-square'></i> Editar
+                                                        </button>
+                                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModalUser" data-user-id="<?= htmlspecialchars($row['ID']) ?>" data-user-name="<?= htmlspecialchars($row['nombre'] . ' ' . $row['apellido']) ?>">
+                                                            <i class='bi bi-trash'></i> Eliminar
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                     <?php   }

@@ -22,6 +22,11 @@
                     Test 3
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/actualizar-kostick">
+                    Test kostick (editar)
+                </a>
+            </li>
         </ul>
     </div>
 </div>

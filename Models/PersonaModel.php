@@ -3,16 +3,19 @@
 namespace App\Models;
 
 require_once 'Database/Database.php';
+require_once 'Models/BaseModel.php';
 
 use App\Database\Database;
+use App\Models\BaseModel;
 
-class PersonaModel
+class PersonaModel extends BaseModel
 {
-    private $db;
+    //private $db;
 
     public function __construct()
     {
-        $this->db = new Database();
+        //$this->db = new Database();
+        parent::__construct();
     }
 
     /**
@@ -21,18 +24,19 @@ class PersonaModel
      */
     public function getPersonas(): array
     {
-        $connection = $this->db->getConnection();
-        $result = $connection->query(
+        //$connection = $this->db->getConnection();
+        //$result = $connection->query(
+        $result = $this->db->query(
             "SELECT id_persona AS ID, nombre, apellido, curp, rfc, nivel_academico, perfil_profesional, id_perfil FROM db_cognos.persona
                     WHERE persona.status = 1;"
         )->fetch_all(MYSQLI_ASSOC);
-        $this->db->closeConnection();
+        //$this->db->closeConnection();
 
         return $result;
     }
 
     /**
-     * Guarda los datos de la persona
+     * Guarda los datos una nueva persona
      * @param array $personaInfo
      * @return bool
      */
@@ -43,7 +47,7 @@ class PersonaModel
         }
 
         // Obtener conexión mysqli
-        $connection = $this->db->getConnection();
+        //$connection = $this->db->getConnection();
 
         // Extraer columnas y preparar placeholders
         $columns = array_keys($personaInfo);
@@ -52,10 +56,12 @@ class PersonaModel
 
         // Construir consulta
         $sql = "INSERT INTO db_cognos.persona VALUES (" . implode(', ', $placeholders) . ")";
-        $stmt = $connection->prepare($sql);
+        //$stmt = $connection->prepare($sql);
+        $stmt = $this->db->prepare($sql);
 
         if (!$stmt) {
-            error_log("Error al preparar la consulta: " . $connection->error);
+            //error_log("Error al preparar la consulta: " . $connection->error);
+            error_log("Error al preparar la consulta: " . $this->db->error);
             return false;
         }
 
@@ -65,17 +71,20 @@ class PersonaModel
 
         $result = $stmt->execute();
         $stmt->close();
-        $connection->close();
+        //$connection->close();
+        //$this->db->close();
 
         return $result;
     }
 
     public function getPersonaCount(): array
     {
-        $connection = $this->db->getConnection();
-        $result = $connection->query("SELECT COUNT(*) AS total FROM db_cognos.persona;");
+        //$connection = $this->db->getConnection();
+        //$result = $connection->query("SELECT COUNT(*) AS total FROM db_cognos.persona;");
+        $result = $this->db->query("SELECT COUNT(*) AS total FROM db_cognos.persona;");
         $count = $result ? $result->fetch_assoc() : ['total' => 0];
-        $this->db->closeConnection();
+        //$this->db->closeConnection();
+        $this->db->close();
 
         return $count;
     }
@@ -86,17 +95,20 @@ class PersonaModel
      */
     public function updateStatus(string $id): bool
     {
-        $connection = $this->db->getConnection();
-        $stmt = $connection->prepare("UPDATE persona SET status = 0 WHERE id_persona = ?");
+        //$connection = $this->db->getConnection();
+        //$stmt = $connection->prepare("UPDATE persona SET status = 0 WHERE id_persona = ?");
+        $stmt = $this->db->prepare("UPDATE persona SET status = 0 WHERE id_persona = ?");
         $stmt->bind_param("s", $id);
 
         if (!$stmt) {
-            error_log("Error al preparar la consulta: " . $connection->error);
+            //error_log("Error al preparar la consulta: " . $connection->error);
+            error_log("Error al preparar la consulta: " . $this->db->error);
             return false;
         }
         $result = $stmt->execute();
         $stmt->close();
-        $this->db->closeConnection();
+        //$this->db->closeConnection();
+        $this->db->close();
         return $result;
     }
 
@@ -108,8 +120,9 @@ class PersonaModel
      */
     public function updatePersona(string $id, array $infoPersona): bool
     {
-        $connection = $this->db->getConnection();
-        $stmt = $connection->prepare("UPDATE persona SET nombre = ?, apellido = ?, curp = ?, rfc = ?, nivel_academico = ?, perfil_profesional = ? WHERE id_persona = ?");
+        //$connection = $this->db->getConnection();
+        // $stmt = $connection->prepare("UPDATE persona SET nombre = ?, apellido = ?, curp = ?, rfc = ?, nivel_academico = ?, perfil_profesional = ? WHERE id_persona = ?");
+        $stmt = $this->db->prepare("UPDATE persona SET nombre = ?, apellido = ?, curp = ?, rfc = ?, nivel_academico = ?, perfil_profesional = ? WHERE id_persona = ?");
         // Desempaquetar valores del array (asegurar orden correcto)
         $nombre = $infoPersona['nombre'];
         $apellido = $infoPersona['apellido'];
@@ -121,12 +134,14 @@ class PersonaModel
         $stmt->bind_param("sssssss", $nombre, $apellido, $curp, $rfc, $nivelAcademico, $perfilProfesional, $id);
 
         if (!$stmt) {
-            error_log("Error al preparar la consulta: " . $connection->error);
+            //error_log("Error al preparar la consulta: " . $connection->error);
+            error_log("Error al preparar la consulta: " . $this->db->error);
             return false;
         }
         $result = $stmt->execute();
         $stmt->close();
-        $this->db->closeConnection();
+        //$this->db->closeConnection();
+        $this->db->close();
         return $result;
     }
 }

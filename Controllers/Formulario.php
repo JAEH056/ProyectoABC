@@ -2,37 +2,22 @@
 
 namespace App\Controllers;
 
-require_once 'Models/PreguntasModel.php';
+require_once 'Models/DetPreguntaModel.php';
 require_once 'Controllers/BaseController.php';
 
 use App\Controllers\BaseController;
-use App\Models\PreguntasModel;
+use App\Models\DetPreguntaModel;
 
 class Formulario extends BaseController
 {
 
-    private $eval2;
     private $eval3;
     public function __construct()
     {
         parent::__construct();
-        $this->eval2 = new PreguntasModel();
-        $this->eval3 = new PreguntasModel();
+        $this->eval3 = new DetPreguntaModel();
     }
 
-    /**
-     * Devuelve la vista de la evaluacion del test 2 (Kostick)
-     * @return void
-     */
-    public function evalTest2()
-    {
-        $mensaje = $_SESSION['mensaje'] ?? '';
-        $error = $_SESSION['error'] ?? '';
-        $this->render('Formulario/formularioTest2', [
-            'mensaje' => $mensaje,
-            'error' => $error
-        ]);
-    }
 
     /**
      * Devuelve la vista de la evaluacion del test 3 (Zavic)
@@ -40,27 +25,13 @@ class Formulario extends BaseController
      */
     public function evalTest3()
     {
+        $form = new Formulario();
         $mensaje = $_SESSION['mensaje'] ?? '';
         $error = $_SESSION['error'] ?? '';
         $this->render('Formulario/formularioTest3', [
+            'form' => $form,
             'mensaje' => $mensaje,
             'error' => $error
-        ]);
-    }
-
-    /**
-     * Renderiza las preguntas (Kostick) ya renderizado
-     */
-    public function formTest2()
-    {
-        $datosTest = $this->eval2->getEvalTest2();
-
-        $mensaje = $_SESSION['mensaje'] ?? '';
-        $error = $_SESSION['error'] ?? '';
-        return $this->render('Formulario/campoTest2', [
-            'mensaje' => $mensaje,
-            'error' => $error,
-            'datosTest' => $datosTest,
         ]);
     }
 
